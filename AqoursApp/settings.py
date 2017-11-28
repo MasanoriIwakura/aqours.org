@@ -54,7 +54,7 @@ ROOT_URLCONF = 'AqoursApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'AqoursApp/www')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +69,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'AqoursApp.wsgi.application'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'AqoursApp/www/static'),
+]
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
